@@ -62,19 +62,19 @@ const Hero = () => {
             href="#blogs"
             className="text-gray-800 font-semibold hover:text-gray-600 transition"
           >
-            Blogs
+            Projects
           </a>
           <a
             href="#projects"
             className="text-gray-800 font-semibold hover:text-gray-600 transition"
           >
-            Projects
+            Skills
           </a>
           <a
             href="#skills"
             className="text-gray-800 font-semibold hover:text-gray-600 transition"
           >
-            Skills
+            Blog
           </a>
           <a
             href="#contact"
