@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const About = () => (
   <section
     id="about"
-    className="w-full h-screen flex items-center justify-center px-8 bg-white"
+    className="w-full flex items-center justify-center px-8 py-16 bg-white"
   >
     <div className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12">
       {/* Left: Animated Profile Picture */}
@@ -27,7 +27,7 @@ const About = () => (
         transition={{ duration: 0.8, delay: 0.2 }}
         className="flex-1"
       >
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        <h2 className="text-4xl font-bold text-gray-600 mb-4">
           ABOUT <span className="text-gray-600">ME</span>
         </h2>
         <h3 className="text-xl font-semibold text-gray-600 mb-4">

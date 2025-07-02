@@ -3,7 +3,8 @@ import {
   SiJavascript, 
   SiReact, 
   SiTailwindcss, 
-  SiGit 
+  SiGit,
+  SiLinux
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -13,27 +14,29 @@ const Skills = () => {
       { name: "React", icon: SiReact, color: "text-blue-400" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-500" },
       { name: "Git & GitHub", icon: SiGit, color: "text-orange-500" },
+      { name: "Linux", icon: SiLinux, color: "text-gray-300" },
     ];
   
   
     return (
-      <section id="skills" className="py-16 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">My Skills</h2>
+      <section id="skills" className="py-16 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Skills</h2>
   
           {/* Tech Skills */}
           <div className="mb-10">
-            <h3 className="text-xl font-semibold text-gray-700 mb-6">Tech Stack</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full">
               {techSkills.map((skill, index) => {
-                const IconComponent = skill.icon;
+                const IconComponent = skill.icon;  
                 return (
                   <div
                     key={index}
-                    className="bg-gray-900 border border-gray-700 rounded-lg p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/20 hover:scale-105"
+                    className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex items-center gap-4"
                   >
-                    <IconComponent className={`text-4xl mb-3 ${skill.color}`} />
-                    <span className="text-white text-sm font-medium">
+                    <div className="flex-shrink-0">
+                      <IconComponent className={`text-3xl ${skill.color}`} />
+                    </div>
+                    <span className="text-gray-900 text-base font-semibold">
                       {skill.name}
                     </span>
                   </div>

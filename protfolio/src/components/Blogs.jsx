@@ -24,16 +24,40 @@ const Blogs = () => {
         categoryColor: "text-green-600",
         mediumUrl: "https://medium.com/@yourusername/your-third-article-slug"
       },
+       {
+        title: "Your First Medium Article Title",
+        summary: "Brief description of your first article...",
+        category: "Tech", // Change to appropriate category
+        readTime: "5 min read",
+        categoryColor: "text-purple-600",
+        mediumUrl: "https://medium.com/@yourusername/your-article-slug"
+      },
+      {
+        title: "Your Second Medium Article Title",
+        summary: "Brief description of your second article...",
+        category: "Development",
+        readTime: "8 min read",
+        categoryColor: "text-blue-600",
+        mediumUrl: "https://medium.com/@yourusername/your-second-article-slug"
+      },
+      {
+        title: "Your Third Medium Article Title",
+        summary: "Brief description of your third article...",
+        category: "Programming",
+        readTime: "6 min read",
+        categoryColor: "text-green-600",
+        mediumUrl: "https://medium.com/@yourusername/your-third-article-slug"
+      },
       // Add more of your Medium articles here
     ];
   
     return (
       <section
         id="blogs"
-        className="w-full min-h-screen flex flex-col items-center justify-center bg-gray-50 py-12 px-4"
+        className="w-full flex flex-col items-center justify-center bg-gray-50 py-16 px-6"
       >
         <h2 className="text-4xl font-bold text-gray-800 mb-12">
-          My <span className="text-indigo-600">Blogs</span>
+          <span className="text-gray-800">Blogs</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full">
           {blogPosts.map((post, index) => (
