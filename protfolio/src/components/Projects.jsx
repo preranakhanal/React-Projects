@@ -35,7 +35,7 @@ const Projects = () => {
     return (
       <section
         id="projects"
-        className="w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-pink-50 py-20 px-8"
+        className="w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50 py-20 px-8"
       >
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
