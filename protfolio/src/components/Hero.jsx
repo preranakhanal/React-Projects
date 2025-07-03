@@ -48,37 +48,37 @@ const Hero = () => {
         <div className="flex space-x-4 sm:space-x-8 md:space-x-14">
           <a
             href="#home"
-            className="text-gray-800 font-semibold hover:text-gray-600 transition"
+            className="text-gray-800 font-bold text-lg hover:text-gray-600 transition"
           >
             Home
           </a>
           <a
             href="#about"
-            className="text-gray-800 font-semibold hover:text-gray-600 transition"
+            className="text-gray-800 font-bold text-lg hover:text-gray-600 transition"
           >
             About
           </a>
           <a
             href="#blogs"
-            className="text-gray-800 font-semibold hover:text-gray-600 transition"
+            className="text-gray-800 font-bold text-lg hover:text-gray-600 transition"
           >
             Projects
           </a>
           <a
             href="#projects"
-            className="text-gray-800 font-semibold hover:text-gray-600 transition"
+            className="text-gray-800 font-bold text-lg hover:text-gray-600 transition"
           >
             Skills
           </a>
           <a
             href="#skills"
-            className="text-gray-800 font-semibold hover:text-gray-600 transition"
+            className="text-gray-800 font-bold text-lg hover:text-gray-600 transition"
           >
             Blog
           </a>
           <a
             href="#contact"
-            className="text-gray-800 font-semibold hover:text-gray-600 transition"
+            className="text-gray-800 font-bold text-lg hover:text-gray-600 transition"
           >
             Contact
           </a>
@@ -128,7 +128,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.p
-          className="text-lg text-gray-500 max-w-xl mb-6"
+          className="text-xl text-gray-500 max-w-xl mb-6"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
