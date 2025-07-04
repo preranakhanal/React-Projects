@@ -9,7 +9,7 @@ const AllBlogs = () => {
       category: "Cybersecurity",
       readTime: "3 min read",
       date: "Jun 16, 2024",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42/file-inclusion-attack-using-dvwa-8e0a607cdcaf"
     },
     {
       title: "CSRF DVWA Walkthrough",
@@ -17,7 +17,7 @@ const AllBlogs = () => {
       category: "Web Security",
       readTime: "6 min read",
       date: "Dec 27, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "Keeper: Hack The Box Walkthrough",
@@ -25,7 +25,7 @@ const AllBlogs = () => {
       category: "Ethical Hacking",
       readTime: "8 min read",
       date: "Dec 19, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "TryHackMe: Pickle Rick Walkthrough",
@@ -33,7 +33,7 @@ const AllBlogs = () => {
       category: "CTF Writeup",
       readTime: "5 min read",
       date: "Dec 18, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "TryHackMe: RootMe CTF Writeup",
@@ -41,7 +41,7 @@ const AllBlogs = () => {
       category: "CTF Writeup",
       readTime: "7 min read",
       date: "Dec 18, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "DVWA: Command Execution",
@@ -49,7 +49,7 @@ const AllBlogs = () => {
       category: "Cybersecurity",
       readTime: "4 min read",
       date: "Dec 13, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "SQL Injection Fundamentals",
@@ -57,7 +57,7 @@ const AllBlogs = () => {
       category: "Web Security",
       readTime: "10 min read",
       date: "Nov 28, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "XSS Attack Vectors and Prevention",
@@ -65,7 +65,7 @@ const AllBlogs = () => {
       category: "Web Security",
       readTime: "8 min read",
       date: "Nov 15, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "Linux Privilege Escalation Techniques",
@@ -73,7 +73,7 @@ const AllBlogs = () => {
       category: "Ethical Hacking",
       readTime: "12 min read",
       date: "Nov 02, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "Web Application Reconnaissance",
@@ -81,7 +81,7 @@ const AllBlogs = () => {
       category: "Ethical Hacking",
       readTime: "15 min read",
       date: "Oct 20, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "Buffer Overflow Exploitation",
@@ -89,7 +89,7 @@ const AllBlogs = () => {
       category: "Cybersecurity",
       readTime: "18 min read",
       date: "Oct 05, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     },
     {
       title: "Network Security Fundamentals",
@@ -97,7 +97,7 @@ const AllBlogs = () => {
       category: "Cybersecurity",
       readTime: "14 min read",
       date: "Sep 22, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal"
+      mediumUrl: "https://medium.com/@preranakhanal42"
     }
   ];
 
@@ -130,7 +130,7 @@ const AllBlogs = () => {
             All Blog Posts
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Cybersecurity insights, tutorials, and ethical hacking writeups
+            Cybersecurity and Web development insights, tutorials and ethical hacking writeups
           </p>
           <div className="flex items-center justify-center">
             <div className="bg-white/20 px-6 py-3 rounded-full">
@@ -144,9 +144,9 @@ const AllBlogs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allBlogPosts.map((post, index) => (
-            <article key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 transform">
+            <article key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 transform flex flex-col h-full">
               {/* Blog Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center justify-between mb-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                     post.category === 'Cybersecurity' ? 'bg-red-100 text-red-700' :
@@ -163,11 +163,11 @@ const AllBlogs = () => {
                 <h2 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-indigo-600 transition-colors duration-300">
                   {post.title}
                 </h2>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                   {post.summary}
                 </p>
                 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-auto">
                   <span className="text-sm text-gray-500">{post.readTime}</span>
                   <a
                     href={post.mediumUrl}
@@ -196,7 +196,7 @@ const AllBlogs = () => {
               Follow me on Medium for the latest cybersecurity insights and tutorials
             </p>
             <a 
-              href="https://medium.com/@preranakhanal" 
+              href="https://medium.com/@preranakhanal42" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"

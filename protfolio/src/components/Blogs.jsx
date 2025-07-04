@@ -10,7 +10,7 @@ const Blogs = () => {
         category: "Cybersecurity",
         readTime: "3 min read",
         categoryColor: "text-red-600",
-        mediumUrl: "https://medium.com/@preranakhanal" // Update with your actual Medium URL
+        mediumUrl: "https://medium.com/@preranakhanal42/file-inclusion-attack-using-dvwa-8e0a607cdcaf"
       },
       {
         title: "CSRF DVWA Walkthrough",
@@ -18,7 +18,7 @@ const Blogs = () => {
         category: "Web Security",
         readTime: "6 min read",
         categoryColor: "text-purple-600",
-        mediumUrl: "https://medium.com/@preranakhanal"
+        mediumUrl: "https://medium.com/@preranakhanal42"
       },
       {
         title: "Keeper: Hack The Box Walkthrough",
@@ -26,7 +26,7 @@ const Blogs = () => {
         category: "Ethical Hacking",
         readTime: "8 min read",
         categoryColor: "text-green-600",
-        mediumUrl: "https://medium.com/@preranakhanal"
+        mediumUrl: "https://medium.com/@preranakhanal42"
       },
       {
         title: "TryHackMe: Pickle Rick Walkthrough",
@@ -34,7 +34,7 @@ const Blogs = () => {
         category: "CTF Writeup",
         readTime: "5 min read",
         categoryColor: "text-blue-600",
-        mediumUrl: "https://medium.com/@preranakhanal"
+        mediumUrl: "https://medium.com/@preranakhanal42"
       },
       {
         title: "TryHackMe: RootMe CTF Writeup",
@@ -42,7 +42,7 @@ const Blogs = () => {
         category: "CTF Writeup",
         readTime: "7 min read",
         categoryColor: "text-indigo-600",
-        mediumUrl: "https://medium.com/@preranakhanal"
+        mediumUrl: "https://medium.com/@preranakhanal42"
       },
       {
         title: "DVWA: Command Execution",
@@ -50,7 +50,7 @@ const Blogs = () => {
         category: "Cybersecurity",
         readTime: "4 min read",
         categoryColor: "text-red-600",
-        mediumUrl: "https://medium.com/@preranakhanal"
+        mediumUrl: "https://medium.com/@preranakhanal42"
       },
       // Additional blogs that will be shown after clicking "Show More"
       {
@@ -59,7 +59,7 @@ const Blogs = () => {
         category: "Web Security",
         readTime: "10 min read",
         categoryColor: "text-purple-600",
-        mediumUrl: "https://medium.com/@preranakhanal"
+        mediumUrl: "https://medium.com/@preranakhanal42"
       },
       {
         title: "XSS Attack Vectors and Prevention",
@@ -67,7 +67,7 @@ const Blogs = () => {
         category: "Web Security",
         readTime: "8 min read",
         categoryColor: "text-purple-600",
-        mediumUrl: "https://medium.com/@preranakhanal"
+        mediumUrl: "https://medium.com/@preranakhanal42"
       },
       {
         title: "Linux Privilege Escalation Techniques",
@@ -75,7 +75,7 @@ const Blogs = () => {
         category: "Ethical Hacking",
         readTime: "12 min read",
         categoryColor: "text-green-600",
-        mediumUrl: "https://medium.com/@preranakhanal"
+        mediumUrl: "https://medium.com/@preranakhanal42"
       },
       // Add more of your Medium articles here
     ];
@@ -104,16 +104,16 @@ const Blogs = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full">
           {(showAllBlogs ? blogPosts : blogPosts.slice(0, 6)).map((post, index) => (
-            <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 transform">
+            <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 transform flex flex-col h-full">
               {/* Blog Header with Gradient */}
              
               
               {/* Blog Content */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-indigo-600 transition-colors duration-300">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
                   {post.summary}
                 </p>
                 
@@ -134,7 +134,7 @@ const Blogs = () => {
                 </div>
                 
                 {/* Blog Actions */}
-                <div className="flex gap-3">
+                <div className="flex gap-3 mt-auto">
                   <a
                     href={post.mediumUrl}
                     target="_blank"
@@ -161,7 +161,7 @@ const Blogs = () => {
         <div className="mt-16 text-center">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <a 
-              href="https://medium.com/@preranakhanal" 
+              href="https://medium.com/@preranakhanal42" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
@@ -175,11 +175,11 @@ const Blogs = () => {
             {!showAllBlogs && blogPosts.length > 6 && (
               <Link
                 to="/blogs"
-                className="inline-flex items-center gap-2 bg-white border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-indigo-600 hover:text-white hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
                 Show More Blogs
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
             )}

@@ -80,19 +80,19 @@ const Hero = () => {
             href="#blogs"
             className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
           >
-            Projects
+            Blogs
           </a>
           <a
             href="#projects"
             className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
           >
-            Skills
+            Projects
           </a>
           <a
             href="#skills"
             className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
           >
-            Blog
+            Skills
           </a>
           <a
             href="#contact"
