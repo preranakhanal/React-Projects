@@ -88,10 +88,15 @@ const About = () => (
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+            <a 
+              href="/cv.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
               <FaDownload />
               Download CV
-            </button>
+            </a>
             <a href="#contact" className="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-xl font-semibold hover:bg-indigo-600 hover:text-white transition-all duration-300">
               Let's Talk
             </a>

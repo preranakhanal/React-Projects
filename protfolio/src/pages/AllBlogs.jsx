@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 
 const AllBlogs = () => {
   const allBlogPosts = [
+
+    {
+        title: "Hack The Box Academy: A Beginner's Guide to Linux Fundamentals",
+        summary: "The Linux Fundamentals Box from Hack The Box Academy provides an excellent introduction to Linux systems for cybersecurity professionals and beginners.",
+        category: "Ethical Hacking",
+        readTime: "18 min read",
+        categoryColor: "text-green-600",
+        mediumUrl: "https://medium.com/@preranakhanal42/hack-the-box-academy-a-beginners-guide-to-linux-fundamentals-ffa462e51b0b"
+      },
     {
       title: "File Inclusion Attack using DVWA",
       summary: "A comprehensive guide on file inclusion attacks, covering Local File Inclusion (LFI) and Remote File Inclusion (RFI) vulnerabilities using DVWA for practical demonstration.",
@@ -17,7 +26,7 @@ const AllBlogs = () => {
       category: "Web Security",
       readTime: "6 min read",
       date: "Dec 27, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal42"
+      mediumUrl: "https://medium.com/@preranakhanal42/csrf-dvwa-walkthrough-106b318c7b1f"
     },
     {
       title: "Keeper: Hack The Box Walkthrough",
@@ -25,7 +34,7 @@ const AllBlogs = () => {
       category: "Ethical Hacking",
       readTime: "8 min read",
       date: "Dec 19, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal42"
+      mediumUrl: "https://medium.com/@preranakhanal42/keeper-hack-the-box-walkthrough-570c9a9dc9e9"
     },
     {
       title: "TryHackMe: Pickle Rick Walkthrough",
@@ -33,7 +42,7 @@ const AllBlogs = () => {
       category: "CTF Writeup",
       readTime: "5 min read",
       date: "Dec 18, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal42"
+      mediumUrl: "https://medium.com/@preranakhanal42/tryhackme-pickle-rick-walkthrough-587179c21ffc"
     },
     {
       title: "TryHackMe: RootMe CTF Writeup",
@@ -41,7 +50,7 @@ const AllBlogs = () => {
       category: "CTF Writeup",
       readTime: "7 min read",
       date: "Dec 18, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal42"
+      mediumUrl: "https://medium.com/@preranakhanal42/tryhackme-rootme-ctf-writeup-2e4f98e13135"
     },
     {
       title: "DVWA: Command Execution",
@@ -49,7 +58,7 @@ const AllBlogs = () => {
       category: "Cybersecurity",
       readTime: "4 min read",
       date: "Dec 13, 2023",
-      mediumUrl: "https://medium.com/@preranakhanal42"
+      mediumUrl: "https://medium.com/@preranakhanal42/dvwa-command-execution-8a6324d5f759"
     },
     {
       title: "SQL Injection Fundamentals",
@@ -98,7 +107,39 @@ const AllBlogs = () => {
       readTime: "14 min read",
       date: "Sep 22, 2023",
       mediumUrl: "https://medium.com/@preranakhanal42"
-    }
+    },
+    {
+      title: "Linux Fundamentals Part 3 — TryHackMe",
+      summary: "Complete walkthrough of TryHackMe's Linux Fundamentals Part 3, covering advanced Linux commands, file permissions, and system administration tasks.",
+      category: "CTF Writeup",
+      readTime: "12 min read",
+      date: "Oct 5, 2023",
+      mediumUrl: "https://medium.com/@preranakhanal42/linux-fundamentals-part-3-tryhackme-abf0f4ce4373"
+    },
+    {
+      title: "Linux Fundamentals Part 2 — TryHackMe",
+      summary: "Comprehensive guide to TryHackMe's Linux Fundamentals Part 2, exploring file systems, processes, and essential Linux operations.",
+      category: "CTF Writeup",
+      readTime: "10 min read",
+      date: "Oct 3, 2023",
+      mediumUrl: "https://medium.com/@preranakhanal42/linux-fundamentals-part-2-tryhackme-c530fb20a805"
+    },
+    {
+      title: "Linux Fundamentals Part 1 — TryHackMe",
+      summary: "Introduction to Linux basics through TryHackMe's Linux Fundamentals Part 1, covering basic commands, navigation, and getting started with Linux.",
+      category: "CTF Writeup",
+      readTime: "8 min read",
+      date: "Oct 1, 2023",
+      mediumUrl: "https://medium.com/@preranakhanal42/linux-fundamentals-part-1-tryhackme-7b04b9759ab6"
+    },
+    {
+      title: "OverTheWire — Bandit Walkthrough (Level 0-15)",
+      summary: "In this blog post series, we will be addressing a 'CTF' known as Bandit, created by OverTheWire. This Linux wargame is designed to teach the basics of Linux command line.",
+      category: "CTF Writeup",
+      readTime: "15 min read",
+      date: "Oct 4, 2023",
+      mediumUrl: "https://medium.com/@preranakhanal42/overthewire-bandit-walkthrough-level-0-15-4b04a003dc58"
+    },
   ];
 
   return (

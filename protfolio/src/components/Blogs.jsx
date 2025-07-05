@@ -5,6 +5,14 @@ const Blogs = () => {
     const [showAllBlogs, setShowAllBlogs] = useState(false);
     const blogPosts = [
       {
+        title: "Hack The Box Academy: A Beginner's Guide to Linux Fundamentals",
+        summary: "The Linux Fundamentals Box from Hack The Box Academy provides an excellent introduction to Linux systems for cybersecurity professionals and beginners.",
+        category: "Ethical Hacking",
+        readTime: "18 min read",
+        categoryColor: "text-green-600",
+        mediumUrl: "https://medium.com/@preranakhanal42/hack-the-box-academy-a-beginners-guide-to-linux-fundamentals-ffa462e51b0b"
+      },
+      {
         title: "File Inclusion Attack using DVWA",
         summary: "A comprehensive guide on file inclusion attacks, covering Local File Inclusion (LFI) and Remote File Inclusion (RFI) vulnerabilities using DVWA for practical demonstration.",
         category: "Cybersecurity",
@@ -18,7 +26,7 @@ const Blogs = () => {
         category: "Web Security",
         readTime: "6 min read",
         categoryColor: "text-purple-600",
-        mediumUrl: "https://medium.com/@preranakhanal42"
+        mediumUrl: "https://medium.com/@preranakhanal42/csrf-dvwa-walkthrough-106b318c7b1f"
       },
       {
         title: "Keeper: Hack The Box Walkthrough",
@@ -26,7 +34,7 @@ const Blogs = () => {
         category: "Ethical Hacking",
         readTime: "8 min read",
         categoryColor: "text-green-600",
-        mediumUrl: "https://medium.com/@preranakhanal42"
+        mediumUrl: "https://medium.com/@preranakhanal42/keeper-hack-the-box-walkthrough-570c9a9dc9e9"
       },
       {
         title: "TryHackMe: Pickle Rick Walkthrough",
@@ -34,7 +42,7 @@ const Blogs = () => {
         category: "CTF Writeup",
         readTime: "5 min read",
         categoryColor: "text-blue-600",
-        mediumUrl: "https://medium.com/@preranakhanal42"
+        mediumUrl: "https://medium.com/@preranakhanal42/tryhackme-pickle-rick-walkthrough-587179c21ffc"
       },
       {
         title: "TryHackMe: RootMe CTF Writeup",
@@ -42,7 +50,7 @@ const Blogs = () => {
         category: "CTF Writeup",
         readTime: "7 min read",
         categoryColor: "text-indigo-600",
-        mediumUrl: "https://medium.com/@preranakhanal42"
+        mediumUrl: "https://medium.com/@preranakhanal42/tryhackme-rootme-ctf-writeup-2e4f98e13135"
       },
       {
         title: "DVWA: Command Execution",
@@ -50,34 +58,10 @@ const Blogs = () => {
         category: "Cybersecurity",
         readTime: "4 min read",
         categoryColor: "text-red-600",
-        mediumUrl: "https://medium.com/@preranakhanal42"
+        mediumUrl: "https://medium.com/@preranakhanal42/dvwa-command-execution-8a6324d5f759"
       },
       // Additional blogs that will be shown after clicking "Show More"
-      {
-        title: "SQL Injection Fundamentals",
-        summary: "Deep dive into SQL injection attacks, covering different types of SQLi vulnerabilities and how to prevent them in web applications.",
-        category: "Web Security",
-        readTime: "10 min read",
-        categoryColor: "text-purple-600",
-        mediumUrl: "https://medium.com/@preranakhanal42"
-      },
-      {
-        title: "XSS Attack Vectors and Prevention",
-        summary: "Comprehensive guide on Cross-Site Scripting (XSS) attacks, including stored, reflected, and DOM-based XSS with practical examples.",
-        category: "Web Security",
-        readTime: "8 min read",
-        categoryColor: "text-purple-600",
-        mediumUrl: "https://medium.com/@preranakhanal42"
-      },
-      {
-        title: "Linux Privilege Escalation Techniques",
-        summary: "Essential techniques for privilege escalation in Linux systems during penetration testing and CTF challenges.",
-        category: "Ethical Hacking",
-        readTime: "12 min read",
-        categoryColor: "text-green-600",
-        mediumUrl: "https://medium.com/@preranakhanal42"
-      },
-      // Add more of your Medium articles here
+      
     ];
   
     return (

@@ -194,7 +194,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <motion.a
-            href="https://github.com/"
+            href="https://github.com/preranakhanal"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
@@ -204,7 +204,7 @@ const Hero = () => {
             <FaGithub className="text-gray-700 group-hover:text-indigo-600 text-2xl transition-colors duration-300" />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/prerana-khanal-b73490263/"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
