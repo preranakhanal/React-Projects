@@ -27,7 +27,7 @@ const About = () => (
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left: Profile Picture */}
+        {/* Left: Coding Animation */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -37,25 +37,10 @@ const About = () => (
           <div className="relative group">
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
             <img
-              src="https://randomuser.me/api/portraits/women/44.jpg"
-              alt="Prerana Khanal - React Developer"
+              src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
+              alt="Coding Animation"
               className="relative w-full h-auto rounded-2xl shadow-xl object-cover transform group-hover:scale-105 transition-transform duration-300"
             />
-          </div>
-          
-          {/* Floating Stats Cards */}
-          <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg border border-gray-100">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">3+</div>
-              <div className="text-sm text-gray-600">Years Experience</div>
-            </div>
-          </div>
-          
-          <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-gray-100">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600">50+</div>
-              <div className="text-sm text-gray-600">Projects Done</div>
-            </div>
           </div>
         </motion.div>
 
@@ -71,7 +56,7 @@ const About = () => (
               Hi! I'm <span className="text-indigo-600">Prerana Khanal</span>
             </h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              A passionate <strong>React Developer</strong> and <strong>Cybersecurity enthusiast</strong> 
+              A passionate <strong>React Developer</strong> and <strong>Cybersecurity enthusiast </strong>
               with a love for creating beautiful, secure web experiences. I thrive on turning complex 
               problems into simple, elegant solutions and am always eager to learn cutting-edge technologies.
             </p>

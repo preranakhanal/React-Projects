@@ -113,9 +113,15 @@ const Hero = () => {
         >
           <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full blur opacity-30 animate-pulse"></div>
           <img
-            src="https://randomuser.me/api/portraits/women/44.jpg"
+            src="/cat.jpg"
             alt="Profile"
-            className="relative w-32 h-32 rounded-full border-4 border-white shadow-2xl object-cover"
+            className="relative w-32 h-32 rounded-full border-4 border-white shadow-2xl object-cover object-center"
+            style={{
+              imageRendering: 'auto',
+              imageResolution: 'from-image',
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
           />
           
         </motion.div>
