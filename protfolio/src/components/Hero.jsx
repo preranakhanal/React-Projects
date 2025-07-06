@@ -4,7 +4,6 @@ import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaArrowDown,
   FaPaperPlane,
   FaFolderOpen,
 } from 'react-icons/fa';
@@ -44,59 +43,59 @@ const Hero = () => {
 
       {/* Responsive Navbar with PK Logo */}
       <motion.div 
-        className="flex justify-center items-center w-full pt-8 absolute top-0 left-0 z-20"
+        className="flex justify-center items-center w-full pt-4 sm:pt-6 md:pt-8 absolute top-0 left-0 z-20 px-2 sm:px-4"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        {/* PK Logo */}
+        {/* PK Logo - Hidden on mobile */}
         <motion.a
           href="#home"
           onClick={() => window.location.reload()}
-          className="absolute left-4 md:left-16 flex items-center group"
+          className="absolute left-2 sm:left-4 md:left-16 flex items-center group hidden sm:flex"
           style={{ textDecoration: 'none' }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white w-12 h-12 rounded-xl flex items-center justify-center font-bold text-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
             PK
           </div>
         </motion.a>
         {/* Nav Links */}
-        <div className="flex space-x-2 sm:space-x-4 md:space-x-8">
+        <div className="flex flex-wrap justify-center space-x-1 sm:space-x-2 md:space-x-4 lg:space-x-8 px-2">
           <a
             href="#home"
-            className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
+            className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-2 sm:px-3 py-2 rounded-lg transform hover:scale-105"
           >
             Home
           </a>
           <a
             href="#about"
-            className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
+            className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-2 sm:px-3 py-2 rounded-lg transform hover:scale-105"
           >
             About
           </a>
           <a
             href="#blogs"
-            className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
+            className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-2 sm:px-3 py-2 rounded-lg transform hover:scale-105"
           >
             Blogs
           </a>
           <a
             href="#projects"
-            className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
+            className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-2 sm:px-3 py-2 rounded-lg transform hover:scale-105"
           >
             Projects
           </a>
           <a
             href="#skills"
-            className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
+            className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-2 sm:px-3 py-2 rounded-lg transform hover:scale-105"
           >
             Skills
           </a>
           <a
             href="#contact"
-            className="text-gray-700 font-semibold text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-3 py-2 rounded-lg transform hover:scale-105"
+            className="text-gray-700 font-semibold text-xs sm:text-sm md:text-base hover:text-white hover:bg-indigo-600 transition-all duration-300 px-2 sm:px-3 py-2 rounded-lg transform hover:scale-105"
           >
             Contact
           </a>
@@ -104,9 +103,9 @@ const Hero = () => {
       </motion.div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center pt-36 md:pt-32 pb-12">
+      <div className="relative z-10 flex flex-col items-center pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 px-4">
         <motion.div
-          className="relative mb-6"
+          className="relative mb-3 sm:mb-4 md:mb-6"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -115,7 +114,7 @@ const Hero = () => {
           <img
             src="/cat.jpg"
             alt="Profile"
-            className="relative w-32 h-32 rounded-full border-4 border-white shadow-2xl object-cover object-center"
+            className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-white shadow-2xl object-cover object-center"
             style={{
               imageRendering: 'auto',
               imageResolution: 'from-image',
@@ -126,13 +125,13 @@ const Hero = () => {
           
         </motion.div>
         <motion.div
-          className="text-center mb-6"
+          className="text-center mb-4 sm:mb-5 md:mb-6"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="inline-block mb-4"
+            className="inline-block mb-3 sm:mb-4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -141,7 +140,7 @@ const Hero = () => {
               👋 Welcome to my portfolio
             </span>
           </motion.div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
             Hi, I am{' '}
             <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
               Prerana Khanal
@@ -151,7 +150,7 @@ const Hero = () => {
 
         {/* Animated Typing Effect */}
         <motion.div
-          className="text-xl md:text-3xl text-gray-600 font-bold mb-6 min-h-[3rem] flex items-center justify-center"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 font-bold mb-3 sm:mb-4 md:mb-5 min-h-[2rem] sm:min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center px-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -174,7 +173,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.p
-          className="text-lg md:text-xl text-gray-600 max-w-2xl mb-8 leading-relaxed text-center"
+          className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mb-4 sm:mb-5 md:mb-6 leading-relaxed text-center px-4"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -188,7 +187,7 @@ const Hero = () => {
 
         {/* Social Icons */}
         <motion.div
-          className="flex justify-center space-x-6 mb-8"
+          className="flex justify-center space-x-4 sm:space-x-5 md:space-x-6 mb-4 sm:mb-5 md:mb-6 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -197,78 +196,65 @@ const Hero = () => {
             href="https://github.com/preranakhanal"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+            className="group bg-white p-3 sm:p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
             whileHover={{ y: -5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <FaGithub className="text-gray-700 group-hover:text-indigo-600 text-2xl transition-colors duration-300" />
+            <FaGithub className="text-gray-700 group-hover:text-indigo-600 text-xl sm:text-2xl transition-colors duration-300" />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/prerana-khanal-b73490263/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+            className="group bg-white p-3 sm:p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
             whileHover={{ y: -5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <FaLinkedin className="text-gray-700 group-hover:text-blue-600 text-2xl transition-colors duration-300" />
+            <FaLinkedin className="text-gray-700 group-hover:text-blue-600 text-xl sm:text-2xl transition-colors duration-300" />
           </motion.a>
           <motion.a
             href="mailto:prerana@gmail.com"
-            className="group bg-white p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+            className="group bg-white p-3 sm:p-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
             whileHover={{ y: -5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <FaEnvelope className="text-gray-700 group-hover:text-red-500 text-2xl transition-colors duration-300" />
+            <FaEnvelope className="text-gray-700 group-hover:text-red-500 text-xl sm:text-2xl transition-colors duration-300" />
           </motion.a>
         </motion.div>
 
         {/* CTA Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 mb-8"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-0 w-full max-w-md sm:max-w-lg px-4"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
           <motion.a 
             href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="flex-1"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <button className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3 hover:shadow-xl transition-all duration-300 transform hover:shadow-indigo-500/25 group">
-              <FaPaperPlane className="group-hover:rotate-12 transition-transform duration-300" /> 
-              Contact Me
+            <button className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 hover:shadow-2xl transition-all duration-300 transform hover:shadow-indigo-500/30 group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <FaPaperPlane className="group-hover:rotate-12 transition-transform duration-300 relative z-10 text-sm sm:text-base" /> 
+              <span className="relative z-10">Contact Me</span>
             </button>
           </motion.a>
           <motion.a 
             href="#projects"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="flex-1"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <button className="bg-white border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-3 hover:bg-indigo-600 hover:text-white hover:shadow-xl transition-all duration-300 transform group">
-              <FaFolderOpen className="group-hover:scale-110 transition-transform duration-300" /> 
-              View Projects
+            <button className="w-full bg-white border-2 border-indigo-600 text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-purple-600 hover:text-white hover:shadow-2xl hover:border-transparent transition-all duration-300 transform group relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <FaFolderOpen className="group-hover:scale-110 transition-transform duration-300 relative z-10 text-sm sm:text-base" /> 
+              <span className="relative z-10">View Projects</span>
             </button>
           </motion.a>
         </motion.div>
 
-        {/* Scroll Down Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center text-gray-400 hover:text-indigo-600 transition-colors duration-300 cursor-pointer"
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            
-            <FaArrowDown className="text-xl" />
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

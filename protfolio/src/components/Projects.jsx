@@ -15,21 +15,6 @@ const Projects = () => {
         description: "An educational chatbot that teaches users to identify phishing using interactive quizzes.",
         link: "#",
       },
-      {
-        title: "Email Phishing Detection",
-        description: "A machine learning model that detects phishing emails using NLP techniques and Random Forest.",
-        link: "#", // replace with actual link later
-      },
-      {
-        title: "Secure Chat Application",
-        description: "A Python-based chat app using sockets and custom cryptographic algorithms for message encryption.",
-        link: "#",
-      },
-      {
-        title: "Phishing Awareness Chatbot",
-        description: "An educational chatbot that teaches users to identify phishing using interactive quizzes.",
-        link: "#",
-      },
     ];
   
     return (
