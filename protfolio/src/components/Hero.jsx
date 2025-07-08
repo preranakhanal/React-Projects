@@ -8,6 +8,7 @@ import {
   FaFolderOpen,
 } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
+import { Button, Badge } from './ui';
 
 const Hero = () => {
   return (
@@ -136,9 +137,9 @@ const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold border border-indigo-200 shadow-sm">
+            <Badge variant="primary" size="md" className="bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 border border-indigo-200 shadow-sm">
               👋 Welcome to my portfolio
-            </span>
+            </Badge>
           </motion.div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
             Hi, I am{' '}
@@ -229,30 +230,36 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <motion.a 
-            href="#contact"
+          <motion.div
             className="flex-1"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <button className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 hover:shadow-2xl transition-all duration-300 transform hover:shadow-indigo-500/30 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <FaPaperPlane className="group-hover:rotate-12 transition-transform duration-300 relative z-10 text-sm sm:text-base" /> 
-              <span className="relative z-10">Contact Me</span>
-            </button>
-          </motion.a>
-          <motion.a 
-            href="#projects"
+            <Button
+              href="#contact"
+              variant="primary"
+              size="lg"
+              className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 hover:shadow-2xl hover:shadow-indigo-500/30 group relative overflow-hidden"
+              icon={<FaPaperPlane className="group-hover:rotate-12 transition-transform duration-300 text-sm sm:text-base" />}
+            >
+              Contact Me
+            </Button>
+          </motion.div>
+          <motion.div
             className="flex-1"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <button className="w-full bg-white border-2 border-indigo-600 text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-bold text-base sm:text-lg flex items-center justify-center gap-2 sm:gap-3 hover:bg-gradient-to-r hover:from-indigo-600 hover:to-purple-600 hover:text-white hover:shadow-2xl hover:border-transparent transition-all duration-300 transform group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <FaFolderOpen className="group-hover:scale-110 transition-transform duration-300 relative z-10 text-sm sm:text-base" /> 
-              <span className="relative z-10">View Projects</span>
-            </button>
-          </motion.a>
+            <Button
+              href="#projects"
+              variant="outline"
+              size="lg"
+              className="w-full hover:bg-gradient-to-r hover:from-indigo-600 hover:to-purple-600 hover:text-white hover:shadow-2xl hover:border-transparent group relative overflow-hidden"
+              icon={<FaFolderOpen className="group-hover:scale-110 transition-transform duration-300 text-sm sm:text-base" />}
+            >
+              View Projects
+            </Button>
+          </motion.div>
         </motion.div>
 
       </div>

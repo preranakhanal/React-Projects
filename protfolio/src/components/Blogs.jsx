@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Section, Card, Badge, Button } from './ui';
 
 const Blogs = () => {
     const [showAllBlogs, setShowAllBlogs] = useState(false);
@@ -65,30 +66,17 @@ const Blogs = () => {
     ];
   
     return (
-      <section
+      <Section
         id="blogs"
-        className="w-full flex flex-col items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-purple-50 py-20 px-8"
+        background="gradient"
+        badge="My Writings"
+        title={<>Featured <span className="text-indigo-600">Blogs</span></>}
+        subtitle="Sharing insights, tutorials, and writeups about cybersecurity, ethical hacking, and penetration testing"
       >
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full text-sm font-semibold">My Writings</span>
-          </div>
-          <h2 className="text-5xl font-bold text-gray-800 mb-6">
-            Featured <span className="text-indigo-600">Blogs</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Sharing insights, tutorials, and writeups about cybersecurity, ethical hacking, and penetration testing
-          </p>
-          <div className="flex items-center justify-center mt-8">
-            <div className="w-12 h-1 bg-indigo-600 rounded-full"></div>
-            <div className="w-3 h-3 bg-indigo-600 rounded-full mx-4"></div>
-            <div className="w-12 h-1 bg-indigo-600 rounded-full"></div>
-          </div>
-        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full">
           {(showAllBlogs ? blogPosts : blogPosts.slice(0, 6)).map((post, index) => (
-            <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 transform flex flex-col h-full">
+            <Card key={index} className="group flex flex-col h-full">
               {/* Blog Header with Gradient */}
              
               
@@ -137,51 +125,60 @@ const Blogs = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
         
         {/* View All Blogs CTA */}
         <div className="mt-16 text-center">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-            <a 
-              href="https://medium.com/@preranakhanal42" 
-              target="_blank" 
+            <Button
+              href="https://medium.com/@preranakhanal42"
+              target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              variant="primary"
+              size="xl"
+              icon={
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              }
             >
               View All Articles on Medium
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            </Button>
             
             {!showAllBlogs && blogPosts.length > 6 && (
-              <Link
-                to="/blogs"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              <Button
+                onClick={() => setShowAllBlogs(true)}
+                variant="primary"
+                size="xl"
+                icon={
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                }
               >
                 Show More Blogs
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+              </Button>
             )}
             
             {showAllBlogs && (
-              <button
+              <Button
                 onClick={() => setShowAllBlogs(false)}
-                className="inline-flex items-center gap-2 bg-white border-2 border-gray-400 text-gray-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                variant="outline"
+                size="xl"
+                icon={
+                  <svg className="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                }
               >
                 Show Less
-                <svg className="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+              </Button>
             )}
           </div>
         </div>
-      </section>
+      </Section>
     );
   };
   

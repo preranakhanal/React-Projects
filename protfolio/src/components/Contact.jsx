@@ -1,11 +1,18 @@
 import React from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
+import { Section, Card, Button } from './ui'
 
 // This component displays contact information and a contact form
 
 const Contact = () => {
   return (
-    <section id="contact" className="w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-20 px-8">
+    <Section
+      id="contact"
+      background="gradient"
+      badge="Let's Connect"
+      title={<>Get In <span className="text-indigo-600">Touch</span></>}
+      subtitle="Have a project in mind or just want to chat? I'd love to hear from you. Let's create something amazing together!"
+    >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <div className="text-center mb-16">
@@ -29,7 +36,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-white hover:bg-indigo-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1 rounded-2xl p-8 shadow-lg border border-gray-100 h-full flex flex-col">
+            <Card hover={true} padding="lg" shadow="lg" className="border border-gray-100 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Let's Start a Conversation</h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 I'm always interested in new opportunities and exciting projects. 
@@ -91,12 +98,12 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
           
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:bg-indigo-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1 h-full flex flex-col">
-            <div className="mb-6">
+          <Card padding="lg" shadow="lg" className="border border-gray-100">
+            <div className="mb-8">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">Send a Message</h3>
               <p className="text-gray-600">I'll get back to you within 24 hours</p>
             </div>
@@ -156,20 +163,24 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <button
+              <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                variant="primary"
+                size="lg"
+                className="w-full"
+                icon={
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                }
               >
                 Send Message
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-              </button>
+              </Button>
             </form>
-          </div>
+          </Card>
         </div>
       </div>
-    </section>
+    </Section>
   )
 }
 
